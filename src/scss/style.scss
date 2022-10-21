@@ -1,0 +1,43 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Tangerine|Inconsolata);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+$font1:'Montserrat';
+$font2:'Tangerine';
+$font3:'Inconsolata';
+$color1: #00ABB3;
+$color2:#3C4048;
+$color3:#B2B2B2;
+$color4: #EAEAEA;
+$color5: #F2D388;
+$color6: #C98474;
+$hover:#874C62;
+
+*{
+    font-family: $font1;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: 100px;
+}
+html, body, #root{
+    height: 100%;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    background-color: $color1;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+@mixin container{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@import "header";
+@import "footer";
+@import "contact";
