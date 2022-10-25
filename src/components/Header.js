@@ -12,6 +12,7 @@ const Header=(prop)=>{
             <button onClick="" className="material-icons" >search</button>
         </header>
     )
+    
 }
 
 export default Header
