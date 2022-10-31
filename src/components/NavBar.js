@@ -1,20 +1,21 @@
-import React from "react";
+import React from "react"
 import Card from "./CartWidget"
+import {Link} from "react-router-dom"
+
 
 const Nav =()=>{
     return(
-        <>
-        <div>
-        <Card/>
-        </div>
-        <nav>
-            <ul>
-            <a href="#">Inicio</a>
-            <a href="#">Un poco mas..</a>
-            <a href="#">Escribime.</a>
-            </ul>
-        </nav>
-        </>
+<>
+            <div>
+
+                <Card/>
+            </div>
+            <nav>
+                <Link to="/Inicio">Home</Link>
+                <Link to="/Tienda">Tienda</Link>
+                <Link to="/Contacto">Contacto</Link>
+            </nav>
+</>
     )
-}
+}   
 export default Nav

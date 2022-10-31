@@ -1,20 +1,17 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const Contador = () => {
+// const Contador = ({habilitado, handleClick, contador}) => {
 
-    const estado = useState(0)
-    let contador = estado[0]
-    const unaFuncion = estado[1]
+  
+//   return (
+//     <div>
+//         <button 
+//         onClick={handleClick}
+//         disabled={habilitado}
+//         >Click</button>
+//         <p>Contador: <span> {contador}</span></p>
+//     </div>
+//   )
+// }
 
-    let handleClick = (e) => {
-        unaFuncion(contador + 1)
-    }
-
-  return (
-    <div>
-        <button></button>
-    </div>
-  )
-}
-
-export default Contador
+// export default Contador
