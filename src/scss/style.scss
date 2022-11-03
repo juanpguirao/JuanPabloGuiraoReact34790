@@ -1,6 +1,8 @@
 
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Tangerine|Inconsolata);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
 $font1:'Montserrat';
 $font2:'Tangerine';
 $font3:'Inconsolata';
@@ -14,7 +16,6 @@ $hover:#874C62;
 
 *{
     font-family: $font1;
-
     margin: 0;
     padding: 0;
     box-sizing: 100px;

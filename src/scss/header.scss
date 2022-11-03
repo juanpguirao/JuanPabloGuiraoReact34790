@@ -3,27 +3,22 @@
     margin-right: 50px;
 }
 
-nav{
-    margin-left: auto;
-    justify-content: space-between;
+.link{
+    text-decoration: none;
+    color: paleturquoise;
+    
+    display: inline;
+    font-size: medium;
+    margin: 40px;
+    &:hover{color: $hover;
+    text-shadow: 3px 3px 0 0 $color3;}
 
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    a{
-        display: inline;
-        font-size: medium;
-        margin: 4px;
-        &:hover{color: $hover}
-    }
-    }
 }
+
 //--clases--//
 button{
-    box-shadow: 4px 4px 0 0 $color6;
-    width: 150px;
+    box-shadow: 3px 3px 0 0 $color6;
+    width: 30px;
     text-align: center;
     font-size: large;
     border-radius: 25px;
@@ -39,10 +34,14 @@ button:hover, a:focus {
     background-size: 100% 6px;
     transition: background-size 2s;
     background-color: $hover;
+    box-shadow: 3px 3px 0 0 $color3;
 }
 input{
-    width: 40vh;
-    box-shadow: 4px 4px 0 0 $color6;}
+    width: 40vh;   
+    box-shadow: 4px 4px 0 0 $color6;
+    border-radius: 25px;
+
+}
 
 .header{
     position: sticky;

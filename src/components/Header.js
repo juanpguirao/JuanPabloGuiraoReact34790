@@ -1,16 +1,16 @@
 import React from "react"
 import Nav from "./NavBar"
 import ItemListContainer from "./ItemListContainer"
+import Search from "./header/Search"
 
 
 const Header=(prop)=>{
     return(
         
-        <header id="mainHeader" class="header"> 
+        <header id="mainHeader" className="header"> 
             <ItemListContainer nombre="Juan Pablo" apellido="Guirao"/>       
             <Nav/>
-            <input id="search" type="text" value="Search"></input>
-            <button onClick="" className="material-icons" >search</button>
+            <Search/>
         </header>
         
     )

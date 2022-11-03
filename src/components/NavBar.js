@@ -10,10 +10,10 @@ const Nav =()=>{
 
                 <Card/>
             </div>
-            <nav>
-                <Link to="/Inicio">Home</Link>
-                <Link to="/Tienda">Tienda</Link>
-                <Link to="/Contacto">Contacto</Link>
+            <nav className="link">
+                <Link className="nav__link link" to="/Inicio">Home</Link>
+                <Link className="nav__link link" to="/Tienda">Tienda</Link>
+                <Link className="nav__link link" to="/Contacto">Contacto</Link>
             </nav>
 </>
     )
