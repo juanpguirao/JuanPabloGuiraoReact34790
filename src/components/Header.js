@@ -1,13 +1,14 @@
 import React from "react"
+import Link from "react-router-dom"
 import Nav from "./NavBar"
-import ItemListContainer from "./ItemListContainer"
 
-
-const Header=(prop)=>{
+const Header=()=>{
     return(
         
-        <header id="mainHeader" class="header"> 
-            <ItemListContainer nombre="Juan Pablo" apellido="Guirao"/>       
+        <header id="mainHeader" class="header">
+            <Link to="/" className="link">
+                <h1>Store</h1>
+            </Link>
             <Nav/>
             <input id="search" type="text" value="Search"></input>
             <button onClick="" className="material-icons" >search</button>

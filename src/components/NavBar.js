@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "./CartWidget"
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 
 
 const Nav =()=>{
