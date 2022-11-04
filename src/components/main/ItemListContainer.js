@@ -5,37 +5,24 @@ import ItemList from "./ItemList"
 import {getProductByCategoryId, getProducts} from "./utils"
 
 function ItemListContainer() {
-
   const [items, setItems] = useState ([])
   const {cat} = useParams()
+  
   useEffect (()=>{
     if(cat){
-
       getProductByCategoryId(cat) 
-      .then(res => {
-          setItems(res)
-      })
-      .catch(err => {
-          toast.error(err)
-      })
-
-  }else{
-
+      .then(res => {setItems(res)})
+      .catch(err => {toast.error(err)})
+    }else{
       getProducts()
-      .then((respuesta) => {
-          setItems(respuesta)
-      })
-      .catch((error) => {
-          console.log(error)
-      })
-  }
-
-}, [cat])
-
+      .then((respuesta)=>{setItems(respuesta)})
+      .catch((error) => {console.log(error)})}
+    },[cat])
 return (
   <div>
       <h2>Productos</h2>
-      {items.length == 0 ? <h1>Cargando...</h1> : <ItemList items={items} />}
+      {items.length == 0 ? <h1>Cargando Productos...</h1> : 
+      <ItemList items={items}/>}
   </div>
 )
 

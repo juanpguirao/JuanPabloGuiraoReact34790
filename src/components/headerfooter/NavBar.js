@@ -6,9 +6,10 @@ const Nav =()=>{
     return(
 <>
             <nav className="link">
-                <Link className="nav__link link" to="/Inicio">Home</Link>
-                <Link className="nav__link link" to="/Tienda">Tienda</Link>
+                <Link className="nav__link link" to="/Home">Home</Link>
+                <Link className="nav__link link" to="/Productos">Tienda</Link>
                 <Link className="nav__link link" to="/Contacto">Contacto</Link>
+                <Link className="nav__link link" to="/Carrito">Carrito</Link>
             </nav>
 </>
     )

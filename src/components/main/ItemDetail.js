@@ -1,24 +1,17 @@
-import { randProduct } from "@ngneat/falso"
-import ItemCount from "./ItemCount"
 
-const ItemDetail = () => {
+import React from 'react';
+import ItemCount from './ItemCount';
 
-    const producto = randProduct()
-    const handleOnAdd = (cantidad) => {
-        console.log("Se agregaron " + cantidad + " productos")
-        console.log(producto)
-    }
+const ItemDetail = ({title, detail, price, img}) => {
     return (
-        <div>
-            <h2>{producto.title} - ${producto.price}</h2>
-            <div className="detail-flex">
-                <img src={producto.image} alt={producto.title} />
-                <div>
-                    <p>{producto.description}</p>
-                    <ItemCount handleOnAdd={handleOnAdd}/>
-                </div>
+        <>
+            <img src={img} alt={title} className='img-detail' />
+            <div className='contenedor-precio-titulo-detail'>
+            <h2 className='detail-title'>{title} - ${price}</h2>
+            <p>{detail}</p>
+            <ItemCount/>
             </div>
-        </div>
-    )
+        </>
+    );
 }
-export default ItemDetail
+export default ItemDetail;

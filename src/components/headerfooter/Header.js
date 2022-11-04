@@ -8,7 +8,7 @@ export const Header=()=>{
     return(
         
         <header id="mainHeader" class="header">
-            <Link to="/" className="link">
+            <Link to="/Home" className="link">
                 <h1>Store</h1>
             </Link>
             <Nav/>
