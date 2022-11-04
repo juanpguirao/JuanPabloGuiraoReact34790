@@ -32,7 +32,42 @@ main{
     flex-grow: 1;
     padding: 1rem;
 }
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem 1rem;
+    padding: 3rem 0;
+}
+.card {
+    padding: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+.card__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 1rem 0;
+}
 
+.card__description {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.card__button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    background-color: $color1;
+    cursor: pointer;
+}
 @mixin container{
     margin: 0;
     padding: 0;
@@ -41,4 +76,3 @@ main{
 
 @import "header";
 @import "footer";
-@import "contact";
