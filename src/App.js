@@ -1,8 +1,9 @@
 import React from "react";
-import Header from "./components/Header"
-import Main from "./components/Main"
-import Footer from "./components/Footer"
+import Header from "./components/headerfooter/Header"
+import Main from "./components/main/Main"
+import Footer from "./components/headerfooter/Footer"
 import {BrowserRouter} from "react-router-dom"
+import {ToastContainer} from "react-toastify"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <Main/>
       <Footer/>
+      <ToastContainer/>
     </BrowserRouter>
   );
 }
