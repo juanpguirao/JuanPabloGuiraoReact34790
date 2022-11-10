@@ -10,7 +10,7 @@ const ContadorContainer = () => {
         setContador(contador + 1)
         //setHabilitado(true)
     }
-
+ 
     return (
         <Contador
             handleClick={handleClick}

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { getProductByCategoryId, getProducts} from "./utils"
 import {toast} from "react-toastify"
 import ItemList from "./ItemList"
-import {getProductByCategoryId, getProducts} from "./utils"
 
 function ItemListContainer() {
+   
   const [items, setItems] = useState ([])
-  const {cat} = useParams()
+  const {cat} = useParams() 
   
   useEffect (()=>{
     if(cat){

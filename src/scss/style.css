@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Tangerine|Inconsolata);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 100px;
+          box-sizing: 100px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: paleturquoise;
+  display: inline;
+  font-size: medium;
+  margin: 40px;
+}
+
+.link:hover {
+  color: #874C62;
+  text-shadow: 3px 3px 0 0 #B2B2B2;
+}
+
+button {
+  -webkit-box-shadow: 3px 3px 0 0 #C98474;
+          box-shadow: 3px 3px 0 0 #C98474;
+  width: 30px;
+  text-align: center;
+  font-size: large;
+  border-radius: 25px;
+  background-color: #00ABB3;
+  color: #B2B2B2;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  text-decoration: none;
+  background-image: #3C4048;
+}
+
+button:hover, a:focus {
+  background-size: 100% 6px;
+  -webkit-transition: background-size 2s;
+  transition: background-size 2s;
+  background-color: #874C62;
+  -webkit-box-shadow: 3px 3px 0 0 #B2B2B2;
+          box-shadow: 3px 3px 0 0 #B2B2B2;
+}
+
+input {
+  width: 40vh;
+  -webkit-box-shadow: 4px 4px 0 0 #C98474;
+          box-shadow: 4px 4px 0 0 #C98474;
+  border-radius: 25px;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #F2D388;
+  height: 8vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 50px #F2D388;
+          box-shadow: 0 0 50px #F2D388;
+  padding: 0.5rem 1;
+}
+
+/*PIE DE PÁGINA */
+footer {
+  background-color: #C98474;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 50px #C98474;
+          box-shadow: 0 0 50px #C98474;
+  border: 2px 0px;
+  border-color: black;
+  font-size: 20px;
+  font-style: normal;
+}
+
+main {
+  background-color: #00ABB3;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem;
+}
+
+.products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem 1rem;
+  padding: 3rem 0;
+}
+
+.card {
+  padding: 0.5rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.card__img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1rem 0;
+}
+
+.card__description {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.card__button {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 3px;
+  background-color: #00ABB3;
+  cursor: pointer;
+}

@@ -2,6 +2,7 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 
+
 const ItemDetail = ({title, detail, price, img}) => {
     return (
         <>

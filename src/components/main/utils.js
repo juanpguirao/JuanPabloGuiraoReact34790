@@ -16,4 +16,5 @@ const generatePromise = (operation,time = 2000) => {
 
 export const getProducts = () => generatePromise(productosIniciales)
 
-export const getProductByCategoryId = (id) => generatePromise(productosIniciales.filter(item=>item.category == id))
+export const getProductByCategoryId = (id) => generatePromise(productosIniciales.filter(item=>item.category === id))
+export const getProductByProductId = (id) => generatePromise(productosIniciales.find(item=>item.id === id))

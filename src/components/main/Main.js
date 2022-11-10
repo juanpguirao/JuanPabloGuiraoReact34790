@@ -10,7 +10,6 @@ const Main=()=>{
         <main>
             <Routes>
                 <Route path='/Home' element={<Home/>}/> 
-                <Route path='/categoria/:cat' element={<ItemListContainer/>}/>
                 <Route path="/productos" element={<ItemListContainer/>}/>
                 <Route path="/productos/:cat"  element={<ItemListContainer/>}/>
                 <Route path="/item/:id" element={<ItemDetailContainer/>}/>

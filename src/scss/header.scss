@@ -6,7 +6,6 @@
 .link{
     text-decoration: none;
     color: paleturquoise;
-    
     display: inline;
     font-size: medium;
     margin: 40px;
@@ -15,26 +14,33 @@
 
 }
 
-//--clases--//
-button{
-    box-shadow: 3px 3px 0 0 $color6;
-    width: 30px;
-    text-align: center;
-    font-size: large;
-    border-radius: 25px;
-    background-color:$color1;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $color2;
     color: $color3;
-    font-family: $font1;
-    font-weight: bolder;
-    text-decoration: none;
-    background-image: $color2;         
-
-}
-button:hover, a:focus {
-    background-size: 100% 6px;
-    transition: background-size 2s;
-    background-color: $hover;
-    box-shadow: 3px 3px 0 0 $color3;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .logo{
+        margin-right: 50px;
+    }
+    .link{
+        text-decoration: none;
+        color: paleturquoise;
+        display: inline;
+        font-size: medium;
+        margin: 40px;
+        &:hover{color: $hover;
+        text-shadow: 3px 3px 0 0 $color3;}
+    }
 }
 input{
     width: 40vh;   

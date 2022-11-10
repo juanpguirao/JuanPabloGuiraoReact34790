@@ -9,10 +9,10 @@ const Footer = () =>{
                 <a href="https:///www.instagram.com/">instagram</a>
                 <a href="https:///www.twitter.com/">twitter</a>
             </div>
-            <div className="]footer_column">
+            <div className="footer_column">
                 <p> Todos los derechos reservados</p>
             </div>
-            <div className="]footer_column">
+            <div className="footer_column">
                 <Nav/>
             </div>
         </footer>
