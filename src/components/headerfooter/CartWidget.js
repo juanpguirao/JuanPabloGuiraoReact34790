@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import {context} from "../../App"
 
 
 function CartWidget() {
+  const valorDelContexto = useContext(context);
   
-  fetch ('GET https://search.icons8.com/api/iconsets/v5/search?term=cart&token=YOUR_API_KEY')
-  .then(response => response.json())
-  .then(data => console.log(data))
-
   return (
-    <div><span className="material-icons">settings_accessibility</span></div>
+    <Link to="/Carrito">
+    <div className="material-icons">shopping_cart</div>
+    <span>{valorDelContexto.qty}</span>
+    </Link>
   )
 }
 
