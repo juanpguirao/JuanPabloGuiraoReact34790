@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductByProductId } from "./utils";
 import {toast} from "react-toastify"
 import ItemDetail from './ItemDetail';
-import Item from './Item';
+
 
 const ItemDetailContainer = () => {   
 

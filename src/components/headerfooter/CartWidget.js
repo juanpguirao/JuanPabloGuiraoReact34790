@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import {context} from "../../App"
+import {contexto} from "../main/CustomProvider"
 
 
 function CartWidget() {
-  const valorDelContexto = useContext(context);
+  const valorDelContexto = useContext(contexto);
   
   return (
     <Link to="/Carrito">

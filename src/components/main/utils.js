@@ -1,8 +1,8 @@
 import {randProduct} from "@ngneat/falso"
 
-let productosIniciales = []
+export let productosIniciales = []
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 3; i++) {
     productosIniciales.push(randProduct())
 }
 

@@ -13,7 +13,7 @@ const Footer = () =>{
                 <p> Todos los derechos reservados</p>
             </div>
             <div className="footer_column">
-                <Nav/>
+                <Nav isHeader={false}/>
             </div>
         </footer>
     )
