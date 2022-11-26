@@ -1,7 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import Nav from "./NavBar"
-import Search from "./Search"
 import CartWidget from "./CartWidget"
 
 export const Header=()=>{
@@ -13,7 +12,6 @@ export const Header=()=>{
             </Link>
             <CartWidget />
             <Nav/>
-            <Search/>
         </header>
         
     )
