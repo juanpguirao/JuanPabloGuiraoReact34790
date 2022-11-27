@@ -1,15 +1,15 @@
 import React from "react"
 import {Routes, Route} from "react-router-dom"
+import Home from "../pages/Home"
+import Carrito from "../pages/Carrito"
 import ItemListContainer from "./ItemListContainer"
 import ItemDetailContainer from "./ItemDetailContainer"
-import Carrito from "../pages/Carrito"
-import Home from "../pages/Home"
 
 const Main=()=>{
     return(
         <main>
             <Routes>
-                <Route path='/Home' element={<Home/>}/> 
+                <Route path='/' element={<Home/>}/> 
                 <Route path="/productos" element={<ItemListContainer/>}/>
                 <Route path="/productos/:cat"  element={<ItemListContainer/>}/>
                 <Route path="/item/:id" element={<ItemDetailContainer/>}/>

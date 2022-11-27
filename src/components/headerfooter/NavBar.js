@@ -1,17 +1,27 @@
 import React from "react"
-import {Link, NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
+import CartWidget from "./CartWidget";
+import { productosIniciales } from "../main/utils"
 
-
-const Nav =()=>{
+const Nav =(isHeader)=>{
+    const categorias = productosIniciales.map((item) => {
+        return (
+            <NavLink to={`/productos/${item.category}`} key={item.category} className="link" activeClassName="active">
+                {item.category} 
+            </NavLink>
+        )
+    })
     return(
-<>
-            <nav className="link">
-                <Link className="nav__link link" to="/Home">Home</Link>
-                <Link className="nav__link link" to="/Productos">Tienda</Link>
-                <Link className="nav__link link" to="/Contacto">Contacto</Link>
-                <Link className="nav__link link" to="/Carrito">Carrito</Link>
-            </nav>
-</>
+        <nav>
+                {!isHeader && categorias }
+                <NavLink className="nav__link link" to="/Home">Home</NavLink>
+                <NavLink className="nav__link link" to="/Productos">Tienda</NavLink>
+                <NavLink className="nav__link link" to="/Productos/Perros">Perros</NavLink>
+                <NavLink className="nav__link link" to="/Productos/Gatos">Gatos</NavLink>
+                <NavLink className="nav__link link" to="/Contacto">Contacto</NavLink>
+                <NavLink className="nav__link link" to="/Carrito">Carrito</NavLink>
+                <CartWidget/>
+        </nav>
     )
 }   
 export default Nav

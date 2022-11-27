@@ -3,13 +3,19 @@ import { useParams } from 'react-router-dom'
 import { getProductByCategoryId, getProducts} from "./utils"
 import {toast} from "react-toastify"
 import ItemList from "./ItemList"
+import { db } from '../firebase'
+import {collection} from "firebase/firestore"
 
 function ItemListContainer() {
-   
+
   const [items, setItems] = useState ([])
   const {cat} = useParams() 
   
   useEffect (()=>{
+    const  productosDB =  collection(db, "productos")
+    const pedido = getDocs (productosDB)
+    pedido.then((resultado)=>{}).catch((error)=>{})
+    
     if(cat){
       getProductByCategoryId(cat) 
       .then(res => {setItems(res)})
