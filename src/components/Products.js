@@ -1,9 +1,9 @@
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore"
 import { toast } from "react-toastify"
-import { dataBase } from "./firebase"
+import { db } from "./firebase"
 
 
-const consultaDB = collection(dataBase, "products")
+const consultaDB = collection(db, "productos")
 
 export const getProducts = () => {
 
@@ -22,7 +22,7 @@ export const getProducts = () => {
 
 export const getProductByCategory = (categoria) => {
 
-	const customQuery = query(consultaDB, where("categoria", "==", categoria))
+	const customQuery = query(consultaDB, where("category", "==", categoria))
 	const pedidoDB = getDocs(customQuery)
 
 	pedidoDB

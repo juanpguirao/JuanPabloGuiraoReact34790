@@ -1,24 +1,35 @@
-import React, {useState} from 'react';
+import { useState } from "react"
 
-const ItemCount = () => {
-    
-    const [count, setCounter] = useState(0)
-    
-    return (
-    <div>
-        <h4>Unidades:</h4>
-            
-        <div className='counter-box'>
+function ItemCount({ handleOnAdd, habilitar }) {
+	const [count, setCount] = useState(1)
 
-            <button className='counter-btn' onClick={()=> {setCounter(count -1 )}}> - </button>
+	const handleMore = () => {
+		setCount(count + 1)
+		habilitar(false)
+	}
 
-            <p className='counter-num'>{count}</p>
+	const handleLess = () => {
+		if (count > 1) {
+			setCount(count - 1)
+			habilitar(false)
+		}
+	}
 
-            <button className='counter-btn' onClick={()=> {setCounter(count + 1)}} > + </button>
-        </div>
-    </div>
+	const addCart = () => {
+		handleOnAdd(count)
+		habilitar(true)
+	}
 
-    )
+	return (<>
+		<div>
+			<div className="counter__buttons">
+                <button onClick={handleMore}>+</button>
+				<p>{count}</p>
+                <button onClick={handleLess}>-</button>		
+			</div>
+            <button onClick={addCart}>Agregar al carrito</button>
+		</div>
+	</>)
 }
 
-export default ItemCount;
+export default ItemCount

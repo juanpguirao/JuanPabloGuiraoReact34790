@@ -1,6 +1,10 @@
-import { createContext, useState, useContext } from "react"
+import { createContext, useState, useContext, useEffect } from "react"
 export const contexto = createContext()
 const { Provider } = contexto
+
+export const useCustomProvider = () => {
+	return useContext(contexto)
+}
 
 
 const CustomProvider = ({ children }) => {
@@ -25,13 +29,11 @@ const CustomProvider = ({ children }) => {
     localStorage.setItem("cantidad", JSON.stringify(cantidadTotal))
     localStorage.setItem("precioFinal", JSON.stringify(total))
 }, [carrito])
-//agrega datos al local storage
+    //agrega datos al local storage
     const vaciarCarrito = () => {
         setCarrito([])
         setTotal(0)
         setCantidadTotal(0)
-    }
-    const borrarItem = (id) => {
     }
     const agregarProducto = (producto, cantidad) => {
         if (isInCart.inCart) {
