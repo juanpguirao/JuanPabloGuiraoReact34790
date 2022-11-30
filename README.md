@@ -4,7 +4,7 @@ Puppis es un E-commerce destinado a la venta de Alimentos para perros y gatos.
 
 Se creo esta aplicacion usando JavaScript y ReactJS.
 
-Se podra navegar por la aplicacion para ver los distintos productos ofrecidos y poder realizar la compra de tales productos.
+Se podra navegar por la aplicacion para ver los distintos productos ofrecidos y poder realizar la compra de tales productos ya sea  por la  tienda donde se veran todos los productos o por cada categoria en especial.
 
 ## INSTALACION 
 Para instalar la app es necesario descargar los archivos del repositorio, tambien puede clonar el repositorio directamente desde consola.
@@ -27,50 +27,27 @@ Dentro de la applicación usted va a encontrar una barra de navegación superior
       * un acceso al carrito - Icono de carrito
 
 
-Puede acceder al detalle de cada producto haciendo click en el botón Leer Más. En el detalle del producto contiene su título, descripción, precio,imagen, botones para incrementar la cantidad de productos deseados y un botón para agregar el producto al carrito de compras.
+Puede acceder al detalle de cada producto haciendo click en el botón Leer Más. En el detalle del producto contiene su título, descripción, precio, botones para incrementar la cantidad de productos deseados y un botón para agregar el producto al carrito de compras.
 
 En el carrito contiene un resumen de los productos seleccionados para la compra con un boton para incrementar o disminuir la cantidad deseada y otro boton para  eliminar el item de la lista, ademas se vera el valor total de la compra, un botón para vaciar el carrito y un boton para finalizar compra.
 
-En el checkout el usuario deberá finalizar la compra. Si el usuario no ingreso a la página previamente o no se encuentra registrado, va a tener un pequeño formulario en donde prodrá ingresar sus datos para poder validar la compra; si el usuario inicio session previamente, no se le pedirá que ingrese sus datos. Una vez finalizada la compra se le dara el feedback con el id para su seguimiento.
-
-Un usuario podrá registrarse en la página accediendo al menú "ingresar", una vez allí podra iniciar session o crear una cuenta.
-Para crear una cuenta, deberá hacer click en "¿No tiene una cuenta? Cree una." en donde se le pedirá que ingrese los datos correspondientes.
-
-Para iniciar session el usuario podrá seleccionar dos formas:
-  * ingresar mediante email y contraseña con previo registro en la página.
-  * ingresar mediante Google.
-  
-Una vez iniciada la session se le va a habilitar al usuario la posibilidad de tener una Wishlist en donde guardar sus productos favoritos.
-
-Para agregar productos a la wishlist debe hacer click en el icono de corazon que se encuentra en la tarjeta de cada producto.
-Dentro de wishlist puede agregar los productos al carrito o vaciar la lista.
-Si el usuario agrega los productos al carrito, el listado se vacía.
-La lista de productos deseados solo se guarda en la base de datos cuando el usuario finaliza la session.
 
 ## TECNOLOGIAS USADAS
 
-* "@emotion/react":        version "^11.10.4"      Libreria que utiliza Material UI para darle estilos a sus componentes
-* "@emotion/styled":       version "^11.10.4"      Libreria que utiliza Material UI para darle estilos a sus componentes
-* "@fontsource/roboto":    version "^4.5.8"        Utilizada como fuente para los textos de la app.
-* "@mui/icons-material":   version "^5.10.9"       Utilizada para agregar iconos en los componentes.
-* "@mui/material":         version "^5.10.10"      Utilizada para la maquetación de los componentes.
-* "firebase":              version "^9.14.0"       Utilizada para guardar los productos, las ventas, los usuarios registrados y las wish list.
-* "react":                 version "^18.2.0"       Utilizada para la creación de la app.
-* "react-dom":             version "^18.2.0"       Utilizada para proporcionar metodos de acceso al DOM virtual.
-* "react-router-dom":      version "^6.4.2"        Utilizada para la navegación dentro de la aplicación.
-* "react-scripts":         version "5.0.1"         Utilizada para ejecutar los scripts que vienen al instalar create-react-app. (start, build, test, eject)
-
- ## GIF
- ![Entrega final Barolin](https://user-images.githubusercontent.com/98109747/204173186-22d5f172-98f9-4cc4-b4bd-c04bc42e82bd.gif)
+* "@emotion/react":              Libreria utilizada para darle estilos a sus componentes
+* "@emotion/styled":             Libreria utilizada para darle estilos a sus componentes
+* "@mui/icons-material":         Libreria utilizada para agregar iconos en los componentes.
+* "@mui/material":               Libreria utilizada para la maquetación de los componentes.
+* "firebase":                    Libreria utilizada para guardar los productos, las ventas, los usuarios registrados y las wish list.
+* "react":                       Libreria utilizada para la creación de la app.
+* "react-dom":                   Libreria utilizada para proporcionar metodos de acceso al DOM virtual.
+* "react-router-dom":            Libreria utilizada para la navegación dentro de la aplicación.
+* "react-scripts":               Libreria utilizada para ejecutar los scripts que vienen al instalar create-react-app.
+* "sass"                         Libreria utilizada para arganizar las paginas de estilos.
  
- ##IMAGENES
-### Firebase
-#### Productos
- ![Firebase-productos](https://user-images.githubusercontent.com/98109747/204173262-e628aa50-f557-4896-ab67-0f829d4b5813.jpg)
-#### Ventas
-![Firebase-ventas](https://user-images.githubusercontent.com/98109747/204173265-e0d3f612-8ac5-4091-b374-94da9456b96f.jpg)
-#### Wish list
-![Firebase-wishlist](https://user-images.githubusercontent.com/98109747/204173275-4b5c8aa5-7535-4b24-ac33-b928e775b9c3.jpg)
-#### Usuarios registrados
-![Usuarios registrados](https://user-images.githubusercontent.com/98109747/204173782-dde1f87c-5345-477c-83be-c5b8671763aa.jpg)
+## IMAGENES
+imagenes de la app en de su contenido mas importante  y funcionamiento
+https://drive.google.com/drive/folders/1rJnORw7HXfZr5zZkZnfNMU8zmz5CMNtR?usp=share_link
+
+
 

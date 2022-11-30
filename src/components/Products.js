@@ -17,7 +17,6 @@ export const getProducts = () => {
 		.catch((e) => {
 			toast.error(e)
 		})
-		console.log(pedidoDB)
 	return pedidoDB
 
 }
