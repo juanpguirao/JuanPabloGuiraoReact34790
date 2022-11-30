@@ -5,6 +5,7 @@ import { db } from "./firebase"
 
 const consultaDB = collection(db, "productos")
 
+
 export const getProducts = () => {
 
 	const pedidoDB = getDocs(consultaDB)
@@ -16,6 +17,7 @@ export const getProducts = () => {
 		.catch((e) => {
 			toast.error(e)
 		})
+		console.log(pedidoDB)
 	return pedidoDB
 
 }

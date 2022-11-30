@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Puppis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Puppis es un E-commerce destinado a la venta de Alimentos para perros y gatos. 
 
-## Available Scripts
+Se creo esta aplicacion usando JavaScript y ReactJS.
 
-In the project directory, you can run:
+Se podra navegar por la aplicacion para ver los distintos productos ofrecidos y poder realizar la compra de tales productos.
 
-### `npm start`
+## INSTALACION 
+Para instalar la app es necesario descargar los archivos del repositorio, tambien puede clonar el repositorio directamente desde consola.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A través del siguiente link puede acceder al proyecto:
+https://github.com/juanpguirao/JuanPabloGuiraoReact34790.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Una vez descargado el proyecto, abra su consola de comandos, ingrese a la carpeta principal del proyecto y ejecute los siguientes comandos:
 
-### `npm test`
+    * $ cd <dirección a la carpeta principal del proyecto> 
+    * $ npm install - para instalar la aplicación y sus dependencias. 
+    * Una vez completada la instalación ejecute el comando 
+    * $ npm start - para correr la aplicación y poder verla en el navegador. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## USANDO LA APLICACIÓN
+Dentro de la applicación usted va a encontrar una barra de navegación superior para navegar por las siguientes secciones: 
 
-### `npm run build`
+      * un listado de todos los productos disponibles - Tienda
+      * un acceso a cada categoría - Gatos y Perros
+      * un acceso al carrito - Icono de carrito
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Puede acceder al detalle de cada producto haciendo click en el botón Leer Más. En el detalle del producto contiene su título, descripción, precio,imagen, botones para incrementar la cantidad de productos deseados y un botón para agregar el producto al carrito de compras.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En el carrito contiene un resumen de los productos seleccionados para la compra con un boton para incrementar o disminuir la cantidad deseada y otro boton para  eliminar el item de la lista, ademas se vera el valor total de la compra, un botón para vaciar el carrito y un boton para finalizar compra.
 
-### `npm run eject`
+En el checkout el usuario deberá finalizar la compra. Si el usuario no ingreso a la página previamente o no se encuentra registrado, va a tener un pequeño formulario en donde prodrá ingresar sus datos para poder validar la compra; si el usuario inicio session previamente, no se le pedirá que ingrese sus datos. Una vez finalizada la compra se le dara el feedback con el id para su seguimiento.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Un usuario podrá registrarse en la página accediendo al menú "ingresar", una vez allí podra iniciar session o crear una cuenta.
+Para crear una cuenta, deberá hacer click en "¿No tiene una cuenta? Cree una." en donde se le pedirá que ingrese los datos correspondientes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para iniciar session el usuario podrá seleccionar dos formas:
+  * ingresar mediante email y contraseña con previo registro en la página.
+  * ingresar mediante Google.
+  
+Una vez iniciada la session se le va a habilitar al usuario la posibilidad de tener una Wishlist en donde guardar sus productos favoritos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para agregar productos a la wishlist debe hacer click en el icono de corazon que se encuentra en la tarjeta de cada producto.
+Dentro de wishlist puede agregar los productos al carrito o vaciar la lista.
+Si el usuario agrega los productos al carrito, el listado se vacía.
+La lista de productos deseados solo se guarda en la base de datos cuando el usuario finaliza la session.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## TECNOLOGIAS USADAS
 
-## Learn More
+* "@emotion/react":        version "^11.10.4"      Libreria que utiliza Material UI para darle estilos a sus componentes
+* "@emotion/styled":       version "^11.10.4"      Libreria que utiliza Material UI para darle estilos a sus componentes
+* "@fontsource/roboto":    version "^4.5.8"        Utilizada como fuente para los textos de la app.
+* "@mui/icons-material":   version "^5.10.9"       Utilizada para agregar iconos en los componentes.
+* "@mui/material":         version "^5.10.10"      Utilizada para la maquetación de los componentes.
+* "firebase":              version "^9.14.0"       Utilizada para guardar los productos, las ventas, los usuarios registrados y las wish list.
+* "react":                 version "^18.2.0"       Utilizada para la creación de la app.
+* "react-dom":             version "^18.2.0"       Utilizada para proporcionar metodos de acceso al DOM virtual.
+* "react-router-dom":      version "^6.4.2"        Utilizada para la navegación dentro de la aplicación.
+* "react-scripts":         version "5.0.1"         Utilizada para ejecutar los scripts que vienen al instalar create-react-app. (start, build, test, eject)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ## GIF
+ ![Entrega final Barolin](https://user-images.githubusercontent.com/98109747/204173186-22d5f172-98f9-4cc4-b4bd-c04bc42e82bd.gif)
+ 
+ ##IMAGENES
+### Firebase
+#### Productos
+ ![Firebase-productos](https://user-images.githubusercontent.com/98109747/204173262-e628aa50-f557-4896-ab67-0f829d4b5813.jpg)
+#### Ventas
+![Firebase-ventas](https://user-images.githubusercontent.com/98109747/204173265-e0d3f612-8ac5-4091-b374-94da9456b96f.jpg)
+#### Wish list
+![Firebase-wishlist](https://user-images.githubusercontent.com/98109747/204173275-4b5c8aa5-7535-4b24-ac33-b928e775b9c3.jpg)
+#### Usuarios registrados
+![Usuarios registrados](https://user-images.githubusercontent.com/98109747/204173782-dde1f87c-5345-477c-83be-c5b8671763aa.jpg)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

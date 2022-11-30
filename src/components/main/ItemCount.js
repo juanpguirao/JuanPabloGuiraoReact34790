@@ -23,11 +23,11 @@ function ItemCount({ handleOnAdd, habilitar }) {
 	return (<>
 		<div>
 			<div className="counter__buttons">
-                <button onClick={handleMore}>+</button>
+                <button className="counter__button" onClick={handleLess}>-</button>		
 				<p>{count}</p>
-                <button onClick={handleLess}>-</button>		
+                <button className="counter__button" onClick={handleMore}>+</button>
 			</div>
-            <button onClick={addCart}>Agregar al carrito</button>
+            <button onClick={addCart}>Cantidad a agregar</button>
 		</div>
 	</>)
 }

@@ -37,7 +37,7 @@ function ItemDetail({ producto }) {
 						</div>
 						<div className="item__count">
 							<ItemCount habilitar={habilitar} handleOnAdd={handleOnAdd} />
-							{confirmado && <button>disabled={habilitado} onClick={handleClick}>Agregar al Carrito</button>}
+							{confirmado && <button disabled={habilitado} onClick={handleClick}> Agregar al Carrito</button>}
 
 						</div>
 					</div>

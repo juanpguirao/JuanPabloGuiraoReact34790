@@ -11,6 +11,9 @@ main{
 }
 .card {
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 3px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease;
@@ -21,9 +24,9 @@ main{
 }
 .card__img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin: 1rem 0;
+    height: 200px;
+    object-fit: scale-down;
+    border-radius: 3px 3px 0 0;
 }
 
 .card__description {
@@ -34,8 +37,182 @@ main{
 .card__button {
     width: 100%;
     border: none;
-    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color5;
+    color: $color1;
+    padding: 0.5rem 0;
     border-radius: 3px;
-    background-color: $color6;
+    font-size: 0.8rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Link{
+    text-decoration: none;
+    color: $color1;
+    }
+.contenedor__detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 10px 10px 2px rgba(91, 88, 177, 0.6);
+    transition: all 0.3s ease;
+    }
+.counter__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    }
+.counter__button{    
+    align-items: center;
+    width: 50%;
+    }
+
+    /*------------------ESTILOS DEL CARRITO--------------*/
+.carrito__padre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 2;
+    padding-bottom: 5rem;
+    visibility: hidden;
+}
+
+.carrito {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.5);
+    width: 60%;
+    height: 80%;
+    padding: 1.6rem;
+    border-radius: 8px;
+    overflow-x: scroll;
+    transition: all 300ms ease-in-out;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.carrito h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.carrito__padre.show {
+    visibility: visible;
+}
+
+.carrito.show {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrito__close {
+    display: inline-block;
+    cursor: pointer;
+    transform: all 300ms ease-in-out;
+    margin: 3rem 0 0 2rem
+}
+
+.carrito__close:hover {
+    fill: rgb(209, 204, 205);
+}
+
+.carrito__center {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.carrito__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 1px 10px rgb(170, 194, 197);
+    border-radius: 5px;
+}
+
+.carrito__item div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrito__item img {
+    width: 10rem;
+}
+
+.carrito__item h3 {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.carrito__item .precio__producto {
+    color: #1a202c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: start;
+    margin: 0 auto;
+}
+
+.flechas__cantidad {
+    fill: #353f3b !important;
+    cursor: pointer;
+    margin-top: .3rem;
+}
+
+.carrito__item .cantidad__producto {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.delete__item {
+    cursor: pointer;
+    width: 60px;
+    height: 80px;
+    margin-top: 2rem;
+}
+
+.carrito__footer {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carrito__footer h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.carrito__footer .btn {
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(184, 178, 208);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.carrito__footer .btn:hover {
+    background-color: #0f5c39;
+    color: white;
 }

@@ -48,6 +48,11 @@ input{
     border-radius: 25px;
 
 }
+img{
+    width: 15%;
+    height: 20%;
+    object-fit: cover;
+}
 
 .header{
     position: sticky;

@@ -1,35 +1,46 @@
 import React from 'react'
-import { useCustomProvider } from './CustomProvider'
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
+import { useCustomProvider } from '../CustomProvider';
 
- export const Carrito = () => {
+
+export const Carrito = () => {
   const value = useCustomProvider()
-  const [menu, setMenu] = React.useState(false)
+  const [menu, setMenu] = value.menu
   const carrito = value.productos
   const { borrarProducto, calculoPrecio, vaciarCarrito, total, removerProducto, agregaProdUnidad } = useCustomProvider()
-
 
   const menuFalse = () => {
     setMenu(false)
   }
+
   const show = menu ? "carrito__padre show" : "carrito__padre"
   const show__dos = menu ? "carrito show" : "carrito"
+
   const removeProducto = id => {
     borrarProducto(id)
     calculoPrecio()
   }
+
+
   const remProdByUnit = id => {
     removerProducto(id)
   }
+
   const addProdByUnit = id => {
     agregaProdUnidad(id)
   }
+
 
   return (
     <div className={show}>
       <div className={show__dos}>
         <div onClick={menuFalse}>
-          <button className='carrito__close'></button>
+          <CloseIcon className='carrito__close'></CloseIcon>
         </div>
         <h2>Este es su carrito </h2>
 
@@ -44,12 +55,12 @@ import { NavLink } from 'react-router-dom';
                   <h3>{producto.nombre}</h3>
                   <p className='precio__producto'>$ {producto.precio}</p>
                   <div >
-                    <button fontSize="large" className='flechas__cantidad' onClick={() => addProdByUnit(producto.id)} />
+                    <ArrowDropUpIcon fontSize="large" className='flechas__cantidad' onClick={() => addProdByUnit(producto.id)} />
                     <p className='cantidad__producto'>{producto.cantidad}</p>
-                    <button fontSize="large" className='flechas__cantidad' onClick={() => remProdByUnit(producto.id)} />
+                    <ArrowDropDownIcon fontSize="large" className='flechas__cantidad' onClick={() => remProdByUnit(producto.id)} />
                   </div>
                   <div className='remove__item'>
-                    <button className='delete__item' onClick={() => removeProducto(producto.id)} />
+                    <DeleteIcon className='delete__item' onClick={() => removeProducto(producto.id)} />
                   </div>
                 </div></div>
               ))
@@ -58,8 +69,8 @@ import { NavLink } from 'react-router-dom';
             {carrito.length === 0 ? null : <>
               <h3>Total: $ {total}</h3>
               <NavLink
-                to="./compra" onClick={menuFalse}> <button color="success" className='btn'>Comprar</button></NavLink>
-              <NavLink to="./productos"><button color="success" className='btn' onClick={vaciarCarrito}>Vaciar Carrito</button></NavLink>
+                to="./compra" onClick={menuFalse}> <Button color="success" className='btn'>Comprar</Button></NavLink>
+              <NavLink to="./productos"><Button color="success" className='btn' onClick={vaciarCarrito}>Vaciar Carrito</Button></NavLink>
             </>
             }
 

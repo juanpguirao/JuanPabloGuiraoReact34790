@@ -1,17 +1,25 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
-import {contexto} from "../main/CustomProvider"
+import React from "react";
+import {IconButton,Badge} from "@mui/material/";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import {Link} from "react-router-dom"
+import {useCustomProvider} from "../main/CustomProvider";
 
 
-function CartWidget() {
-  const valorDelContexto = useContext(contexto);
-  
-  return (
-    <Link to="/Carrito">
-    <div className="material-icons">shopping_cart</div>
-    <span>{valorDelContexto.qty}</span>
-    </Link>
-  )
+function CartWidget(){
+    const valorDelContexto = useCustomProvider();
+
+    return(
+        <IconButton LinkComponent={Link} to="/carrito">
+            <Badge anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+                }}
+                badgeContent={valorDelContexto.cuantity} 
+                color="primary">
+                <AddShoppingCartIcon ></AddShoppingCartIcon>
+            </Badge>
+        </IconButton>
+    );
 }
 
-export default CartWidget
+export default CartWidget;
