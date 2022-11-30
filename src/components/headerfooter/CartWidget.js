@@ -14,7 +14,7 @@ function CartWidget(){
                 vertical: 'bottom',
                 horizontal: 'right',
                 }}
-                badgeContent={valorDelContexto.cuantity} 
+                badgeContent={valorDelContexto.productos.length}
                 color="primary">
                 <AddShoppingCartIcon ></AddShoppingCartIcon>
             </Badge>

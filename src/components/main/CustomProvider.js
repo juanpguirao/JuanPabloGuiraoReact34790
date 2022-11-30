@@ -1,6 +1,6 @@
 import { createContext, useState, useContext, useEffect } from "react"
 export const contexto = createContext()
-const { Provider } = contexto
+
 
 export const useCustomProvider = () => {
     return useContext(contexto)
@@ -23,7 +23,7 @@ const CustomProvider = ({ children }) => {
             setTotal(storagePrecio)
         }
     }, [])
-    // agrega productos recuperados de local storage
+    //agrega productos recuperados de local storage
     useEffect(() => {
         localStorage.setItem("carrito", JSON.stringify(carrito))
         localStorage.setItem("cantidad", JSON.stringify(cantidadTotal))
@@ -99,9 +99,9 @@ const CustomProvider = ({ children }) => {
         agregaProdUnidad: agregaProdUnidad
     }
     return (
-        <Provider value={valorDelContexto}>
+        <contexto.Provider value={valorDelContexto}>
             {children}
-        </Provider>
+        </contexto.Provider>
     )
 }
 export default CustomProvider

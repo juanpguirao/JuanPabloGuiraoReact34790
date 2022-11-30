@@ -26,12 +26,15 @@ function ItemListContainer() {
       setItems(prods)})
       .catch((error) => {console.log(error)})}
     },[categoria])
-return (
-  <div>
-      <h2>Productos</h2>
-      {categoria ? <h2>{categoria}</h2> : 
-      <ItemList items={items}/>}
-  </div>
+    return (
+      <div>
+        <div>
+        {categoria ? <h2>{categoria}</h2> : <h2>{}</h2>}
+        </div>
+        <div>
+          <ItemList items={items} />
+        </div>
+      </div>
 )
 
 }

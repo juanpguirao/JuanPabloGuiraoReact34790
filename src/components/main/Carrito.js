@@ -5,7 +5,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { useCustomProvider } from '../CustomProvider';
+import { useCustomProvider } from './CustomProvider';
 
 
 export const Carrito = () => {

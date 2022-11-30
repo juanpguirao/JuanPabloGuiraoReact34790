@@ -11,7 +11,6 @@ const Nav =()=>{
                 <NavLink className="nav__link link" to="/productos">Tienda</NavLink>
                 <NavLink className="nav__link link" to="/productos/Perros">Perros</NavLink>
                 <NavLink className="nav__link link" to="/productos/Gatos">Gatos</NavLink>
-                <NavLink className="nav__link link" to="/carrito">Carrito</NavLink>
                 <CartWidget/>
         </nav>
     )
